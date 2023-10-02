@@ -12,7 +12,7 @@ client = pymongo.MongoClient('')   # Need to add a specific value here.
 print("[INFO] Connected to MongoDB!")
 
 # Load Model
-asr_class0 = ASR()
+asr_class0 = ASR(do_vad=True, do_diarization=False)
 
 print("[INFO] ******* ASR listener is ready!")
 
