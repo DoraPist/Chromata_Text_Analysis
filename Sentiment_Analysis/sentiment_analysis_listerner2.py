@@ -13,7 +13,7 @@ print("[INFO] Connected to MongoDB!")
 
 ##Load Sentiment-Analysis Model
 
-sentiment_class = Sentiment_Analysis('lighteternal/stsb-xlm-r-greek-transfer', ["χαρά", "λύπη", "έκπληξη", "φόβος", "θυμός", "απέχθεια", "θετικό", "αρνητικό"])
+sentiment_class = Sentiment_Analysis('lighteternal/stsb-xlm-r-greek-transfer', ["χαρά", "έκπληξη", "λύπη", "φόβος", "θυμός", "απέχθεια", "θετικό", "αρνητικό"], pretrained = True)
 
 print("[INFO] ******* Sentiment-analysis listener is ready!")
 
