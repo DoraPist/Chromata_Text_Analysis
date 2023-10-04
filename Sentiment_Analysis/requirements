@@ -3,3 +3,5 @@ redis
 pymongo
 sentence-transformers
 boto3
+spacy
+python -m spacy download el_core_news_lg
