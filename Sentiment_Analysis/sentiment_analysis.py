@@ -29,7 +29,7 @@ def sentiment_analysis(message, sentiment_class):
         text = f.read()
 
     # run sentiment analysis    
-    sentiment_results = sentiment_class.run_sentiment_analysis(text)
+    sentiment_results = sentiment_class.run_sentiment_analysis(text, clean_text = True)
     
     # ...
     # ...
