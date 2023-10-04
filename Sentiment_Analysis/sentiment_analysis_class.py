@@ -67,12 +67,12 @@ class Sentiment_Analysis():
                 emotion_logits = self.emotion_model(emotion_temp['input_ids']).logits
                 emotion_norm_logits = softmax(emotion_logits).numpy().squeeze()
                 for i in range(len(emotion_norm_logits)):
-                    self.sentiment_results[self.sents_el_en[self.sentiments_list[i]]] = emotion_norm_logits[i]
+                    self.sentiment_results[self.sents_el_en[self.sentiments_list[i]]] = emotion_norm_logits[i].item()
 
                 sentiment_logits = self.sentiment_model(sentiment_temp['input_ids']).logits
                 sentiment_norm_logits = softmax(sentiment_logits).numpy().squeeze()
                 for i in range(len(sentiment_norm_logits)):
-                    self.sentiment_results[self.sents_el_en[self.sentiments_list[i + 6]]] = sentiment_norm_logits[i]
+                    self.sentiment_results[self.sents_el_en[self.sentiments_list[i + 6]]] = sentiment_norm_logits[i].item()
 
         return self.sentiment_results
     
